@@ -1,0 +1,493 @@
+@charset "utf-8";
+/* CSS Document */
+ body {
+    background-color: white;
+    background-size: cover;
+    font-family: Chonky Bunny;
+    }
+
+a {
+    text-decoration: none;
+    color: #4c2e04
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 30px;
+  max-width: 1200px; /* limit header width */
+  margin: 0 auto; /* center header within page */
+}
+
+#container {
+    background-color: #ffe5c5;
+    width: 1200px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Header Start*/
+.logo-image {
+  width: 330px;     /* adjust to your preferred size */
+  height: auto;
+  display: block;
+}
+.topnav {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  gap: 18px; /* space between buttons */
+  padding: 0;
+  margin: 0;
+}
+.topnav a {
+  display: inline-block;
+  padding: 5px 11px;
+  font-family: "Story of Bela", sans-serif;
+  font-weight:normal;
+  font-size: 22px;
+  color: #4c2e04; /* text color */
+  text-decoration: none;
+  border: 3px solid #4c2e04;
+  border-radius: 50px; /* makes the pill shape */
+  background-color: white; /* base look */
+  transition: all 0.3s ease;
+  margin-right: 26px;
+}
+.topnav a:hover {
+  background-color: #4c2e04;
+  border: 3px solid #4c2e04;
+  color: white;
+  transform: scale(1.1);
+}
+.topnav a.active {
+  background-color: #4c2e04;
+  transform: scale(1.15);
+  border: 3px solid #4c2e04;
+  color: white; /* same as hover but always on */
+}
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* keeps nav centered */
+  gap: 3px;                 /* spacing between nav & cart */
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+/*Header End*/
+
+/*Home Start*/
+.body{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*About Page Start*/
+.bubble-container {
+position: absolute;
+width: 550px;
+left: calc((100% - 1200px) / 2); /* aligns left edge with header */
+}
+.bubble-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 10px;
+    z-index: 1;
+}
+.title-image {
+  position: absolute;
+  top: 7%;  /* move this up or down */
+  left: 5%; /* move this left or right */
+  width: 300px; /* control the size of your title */
+  z-index: 2; /* ensures it sits on top of the bubble */
+  padding-top: 10px;
+
+}
+.bottom-image {
+  position: absolute;
+  top: 94.8%;  /* move this up or down */
+  width: 506px; /* control the size of your title */
+  z-index: 4; /* ensures it sits on top of the bubble */
+}
+.bubble-text {
+  position: absolute;
+  top: 19%; /* adjust vertical placement */
+  left: 7%; /* adjust horizontal placement */
+  right: 7%; /* adds padding on the right side */
+  bottom: 7%; /* optional - keep text from hitting the tail */
+  color: #003366; /* your text color */
+  font-family: "Chonky Bunny";
+  font-size: 18px;
+  line-height: 1.15;
+  text-align: left;
+    z-index: 3;
+}
+
+.topright-image {
+position: absolute;
+  width: 600px;
+  top: 0;
+  right: calc((100% - 1200px) / 2 - 11.9px); /* aligns with header’s right edge */
+  margin-top: 118px; /* small adjustment to touch bottom of header padding */
+}
+
+.flex-container1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 22px;
+  margin-top: 200px;
+  padding-right: 62px; /* optional right spacing */
+  padding-bottom: 18px;
+}
+.column {
+  max-width: 260px; /* adjust to fit your bubble and layout */
+  color: #4c2e04;
+}
+.column img {
+  display: block;
+  width: 250px;
+  margin-bottom: -17px;
+  margin-left: -12px
+}
+.column p {
+  font-size: 18px;
+  line-height: 1.2;
+  font-style: normal;
+  text-align: left;
+}
+.header2 {
+  margin-top: -6px;
+}
+.bodytext2 {
+  margin-top: 9px;
+}
+.column-divider {
+  max-width: 30px;
+  margin-right: 2px;
+  align-self: center; /* 👈 ensures it matches tallest column height */
+}
+/*About Page End*/
+
+.slider-image {
+  width: 100%;
+  flex: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 20px;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  clear: both;
+}
+.flex-container > div {
+  color: black;
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px
+}
+
+/*Flavors start*/
+.flavors-section {
+  margin: 10px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.Flavors-Headline {
+  padding-top: 17px;
+  width: 700px;
+}
+/* Slider container */
+.flavor-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 39px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+.flavor-card {
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+  background: white;
+  text-align: left;
+}
+.flavor-card h3 {
+  font-family: "Story of Bela";
+  font-weight:normal;
+  font-size: 24px;
+  color: #4c2e04;
+  margin-top: 4px;
+  margin-bottom: -17px; 
+}
+.flavor-card p {
+  font-size: 19px;
+  margin-bottom: 13px;
+  color: #4c2e04;
+}
+.flavor-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid #ff9933;
+}
+/*Flavors End*/
+
+/*Footer*/
+.footer {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-bg {
+    width: 1200px;
+    display: block;
+}
+.footer-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 75px;
+    padding-bottom: 21px;
+    color: white;
+    z-index: 2;
+}
+.footer-logo img {
+    width: 50px;
+    height: auto;
+    padding-top: 8px;
+}
+.footer-slogan {
+    font-family: "Pacifico", cursive; /* or your real font */
+    font-weight: normal;
+    font-size: 26px;
+    margin: 0;
+}
+.order-btn {
+    display: inline-block;
+    background: white;
+    color: #002f5e;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+.copyright {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 8px;
+}
+.contact-info {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.footer-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.footer-icons img {
+    width: 127px;
+    height: 47px;
+}
+
+/*Contact Start*/
+.contact-section {
+    width: 100%;
+    height: 615px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Chonky Bunny", sans-serif;
+    font-weight:normal;
+    font-size: 30px;
+}
+.contact-title {
+    width: 80%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto 40px auto;
+    margin-bottom: 0;
+}
+.contact-box {
+    width: 58%;
+    max-width: 1100px;
+    margin: auto;
+    background: #ffe5c5;
+    padding: 44px;
+    border-radius: 60px;
+    border: 5px solid #ff9933;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    padding-bottom: 17px;
+}
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.contact-box label {
+    text-align: left;
+    color: #4c2e04;
+    font-weight: 0;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 11px 1px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+.contact-bottom {
+  width: 100%;
+  padding-top: 11px;
+}
+.contact-box textarea {
+    height: 172px;
+    resize: vertical;
+}
+.send-btn {
+    align-self: flex-end;
+    padding: 7px 15px;
+    border: 3px solid #003366;
+    font-family: "Story of Bela", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #003366;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.send-btn:hover {
+    transform: scale(1.05);
+}
+/*Contact End*/
+
+/*Order Start*/
+.page {
+  max-width: 1200px;
+  height: 540px;
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1.2fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.product-grid {
+  margin-top: -23px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.product-card {
+  border: 3px solid orange;
+  padding: 7px;
+  border-radius: 16px;
+}
+
+.svg-title img {
+  display: block;
+  max-width: 500px;
+  height: auto;
+  margin-left: -25px;
+  margin-top: -36px;
+}
+.svg-heading img {
+  max-width: 300px;
+  height: auto;
+  margin: 2rem auto 1rem;
+  display: block;
+}
+.cart {
+  position: relative;
+}
+.info {
+  padding-right: 29px;
+}
+.cart-bg {
+  position: absolute;
+  inset: 0;
+  width: 429px;
+  height: 631px;
+  z-index: 0;
+  margin-left: -58px;
+  margin-top: -33px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 113px;          /* pick a consistent height */
+  object-fit: cover;     /* crops instead of stretching */
+  border-radius: 10px;
+  display: block;
+}
+.product-card {
+  text-align: left;
+}
+
+.product-name {
+  font-size: 21px;
+  font-weight: normal;
+  margin: 7px 0 0;
+  color: #003366;
+}
+
+.product-details {
+  font-size: 18px;
+  font-weight: normal;
+  color: #003366;
+  text-decoration: none;
+}
+.selected {
+  font-size: 26px;
+  font-family: Pacifico;
+  color: #003366;
+}
+.add-cart {
+  padding: 5px 11px;
+  font-family: "Story of Bela", sans-serif;
+  font-weight:normal;
+  font-size: 19px;
+  color: #003366; /* text color */
+  text-decoration: none;
+  border: 3px solid #003366;
+  border-radius: 50px; /* makes the pill shape */
+  background-color: white; /* base look */
+  transition: all 0.3s ease;
+}
+.quantity {
+  color: #003366;
+  display: flex;
+  justify-content: left;
+  gap: 12px;
+  margin-top: 3px;
+}
+
+.quantity button {
+  width: 23px;
+  height: 20px;
+}
+.info {
+  text-align: center;
+}
+
+
+
